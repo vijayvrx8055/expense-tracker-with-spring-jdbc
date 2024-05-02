@@ -19,4 +19,12 @@ public class UserDto {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "userId='" + userId + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
 }

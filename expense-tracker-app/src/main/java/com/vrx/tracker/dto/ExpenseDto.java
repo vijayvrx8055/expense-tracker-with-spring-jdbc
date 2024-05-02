@@ -15,15 +15,15 @@ public class ExpenseDto {
 
     private LocalDate date;
 
-    private User userId;
-
-    public User getUserId() {
-        return userId;
+    public UserDto getUser() {
+        return user;
     }
 
-    public void setUserId(User userId) {
-        this.userId = userId;
+    public void setUser(UserDto user) {
+        this.user = user;
     }
+
+    private UserDto user;
 
     public Long getExpenseId() {
         return expenseId;
@@ -55,5 +55,16 @@ public class ExpenseDto {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "ExpenseDto{" +
+                "expenseId=" + expenseId +
+                ", description='" + description + '\'' +
+                ", amount=" + amount +
+                ", date=" + date +
+                ", user=" + user +
+                '}';
     }
 }
